@@ -1,0 +1,29 @@
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTTyKeypress: true
+URxvt*scrollBar: false
+
+!URL Stuff
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/google-chrome-beta
+URxvt.matcher.button: 1
+
+!X stuff
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+!Font
+!URxvt.font: -gohu-gohufont-medium-r-*-*-11-*-*-*-*-*-iso10646-1
+URxvt.font: xft:Fantasque Sans Mono:size=10
+!URxvt.font: xft:Ubuntu Mono derivative Powerline:size=10
+
+#include "/home/beau/.config/color/lakeside"
+
+! ibus stuff
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
