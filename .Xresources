@@ -4,7 +4,7 @@ URxvt*scrollTTyKeypress: true
 URxvt*scrollBar: false
 
 !URL Stuff
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: atelierlakeside,matcher
 URxvt.url-launcher: /usr/bin/google-chrome-beta
 URxvt.matcher.button: 1
 
@@ -14,16 +14,26 @@ Xft.autohint: 0
 Xft.dpi: 96
 Xft.hinting: 1
 Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
+Xft.lcdfilter: lcdatelierlakeside
 Xft.rgba: rgb
 
 !Font
-!URxvt.font: -gohu-gohufont-medium-r-*-*-11-*-*-*-*-*-iso10646-1
-URxvt.font: xft:Fantasque Sans Mono:size=10
-!URxvt.font: xft:Ubuntu Mono derivative Powerline:size=10
+URxvt.font:     xft:Termsyn:size=11
+!URxvt.font:    -gohu-gohufont-medium-r-*-*-11-*-*-*-*-*-iso10646-1
+!URxvt.font:    xft:Fantasque Sans Mono:size=10
+!URxvt.font:    xft:M+ 1m:size=10
+!URxvt.font:     xft:Office Code Pro:size=10
 
-#include "/home/beau/.config/color/lakeside"
+#include "/home/beau/.config/colors/atelierlakeside"
 
 ! ibus stuff
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+
+!! rofi shtuff
+rofi.opacity: 50
+rofi.width: 50
+rofi.lines: 5
+rofi.colums: 1
+rofi.color-enabled: true
+
