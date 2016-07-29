@@ -1,10 +1,14 @@
+# ~/.Xresources
+# Beaudidly
+# RIT
+
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTTyKeypress: true
 URxvt*scrollBar: false
 
 !URL Stuff
-URxvt.perl-ext-common: atelierlakeside,matcher
+URxvt.perl-ext-common: matcher
 URxvt.url-launcher: /usr/bin/google-chrome-beta
 URxvt.matcher.button: 1
 
@@ -31,9 +35,13 @@ URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
 !! rofi shtuff
-rofi.opacity: 50
-rofi.width: 50
+!
+rofi.opacity: 90
+rofi.width: 15
 rofi.lines: 5
 rofi.colums: 1
 rofi.color-enabled: true
-
+rofi.separator-style: solid
+!rofi.sidebar-mode: true
+rofi.hide-scrollbar: true
+rofi.terminal: urxvtc -e
