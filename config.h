@@ -45,6 +45,7 @@ static const char *menucmd[]   = { "/usr/bin/my_menu.sh", NULL };
 static const char *gmrun[]     = { "/usr/bin/gmrun",NULL};
 static const char *terminal[]  = { "urxvtc", NULL };
 static const char *rofi[]      = { "rofi", "-show", "run", NULL };
+static const char *slock[]     = { "slock", NULL };
 static const char *click1[]    = { "xdotool","click", "1", NULL };
 static const char *click2[]    = { "xdotool","click", "2", NULL };
 static const char *click3[]    = { "xdotool","click", "3", NULL };
@@ -138,7 +139,7 @@ static key keys[] = {
     // Full screen window without borders
     {  MOD ,              XK_x,         maximize,          {.i=TWOBWM_FULLSCREEN}},
     //Full screen window without borders overiding offsets
-    {  MOD |SHIFT ,       XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
+   // {  MOD |SHIFT ,       XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
     // Maximize vertically
     {  MOD ,              XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_VERTICALLY}},
     // Maximize horizontally
@@ -194,6 +195,7 @@ static key keys[] = {
     {  MOD ,              XK_w,          start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_w,          start,             {.com = gmrun}},
     {  MOD ,              XK_z,          start,             {.com = rofi}},
+    {  MOD |SHIFT,        XK_x,          start,            {.com = slock}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},

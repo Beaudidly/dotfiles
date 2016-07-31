@@ -1,7 +1,3 @@
-# ~/.Xresources
-# Beaudidly
-# RIT
-
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTTyKeypress: true
@@ -9,7 +5,7 @@ URxvt*scrollBar: false
 
 !URL Stuff
 URxvt.perl-ext-common: matcher
-URxvt.url-launcher: /usr/bin/google-chrome-beta
+URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 
 !X stuff
@@ -31,8 +27,8 @@ URxvt.font:     xft:Termsyn:size=11
 #include "/home/beau/.config/colors/atelierlakeside"
 
 ! ibus stuff
-URxvt.inputMethod: ibus
-URxvt.preeditType: OverTheSpot
+!URxvt.inputMethod: ibus
+!URxvt.preeditType: OverTheSpot
 
 !! rofi shtuff
 !
@@ -44,4 +40,4 @@ rofi.color-enabled: true
 rofi.separator-style: solid
 !rofi.sidebar-mode: true
 rofi.hide-scrollbar: true
-rofi.terminal: urxvtc -e
+rofi.terminal: urxvt -e

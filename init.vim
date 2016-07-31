@@ -3,14 +3,11 @@ call plug#begin()
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-"Plug 'Valloric/YouCompleteMe'
-Plug 'jiangmiao/auto-pairs'
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'scrooloose/nerdtree'
-"Plug 'zah/nim.vim'
-"Plug 'vim-airline/vim-airline'
 
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 set tabstop=4
