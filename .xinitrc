@@ -7,7 +7,6 @@ xrdb ~/.Xresources &
 # starts the urxvt daemon
 urxvtd -q -o -f
 
-xsetroot -solid '#464646'
 # ensures deafault cursor
 xsetroot -cursor_name left_ptr &
 
@@ -25,6 +24,9 @@ compton -b &
 
 # lemon bar for time and such
 $HOME/bin/bar.sh | lemonbar -p -f "Termsyn" -g 40x15+940+0 &
+
+# set background
+feh --bg-scale $HOME/walls/building.jpg &
 
 # window managers
 # exec gnome-session --session=gnome-wayland

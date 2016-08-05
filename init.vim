@@ -8,6 +8,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'leafgarland/typescript-vim'
+Plug 'lervag/vimtex'
 call plug#end()
 
 set tabstop=4
@@ -41,9 +42,9 @@ set number
 "let g:airline_section_y="%Y"
 
 " colorscheme
+" set t_CO=16
 set t_CO=256
 set background=dark
-" colo atelier-cave
 syntax on
 
 "eclim play nice with YCM
