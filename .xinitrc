@@ -11,10 +11,7 @@ urxvtd -q -o -f
 xsetroot -cursor_name left_ptr &
 
 # if screens get swapped
-xrandr --output HDMI-1 --right-of HDMI-2 &
-
-# start mpd daemon for using ncmpcpp (music player)
-mpd &
+xrandr --output HDMI1 --right-of HDMI2 &
 
 #compton
 compton -b &
