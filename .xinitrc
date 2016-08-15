@@ -10,6 +10,9 @@ urxvtd -q -o -f
 # ensures deafault cursor
 xsetroot -cursor_name left_ptr &
 
+# no acceleration
+xset 1/1 &
+
 # if screens get swapped
 xrandr --output HDMI1 --right-of HDMI2 &
 
