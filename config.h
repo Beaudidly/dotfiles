@@ -6,7 +6,6 @@
  *0)move step slow   1)move step fast
  *2)mouse slow       3)mouse fast     */
 static const uint16_t movements[] = {20,40,15,400};
-
 /* resize by line like in mcwm -- jmbi */
 static const bool     resize_by_line          = true;
 /* the ratio used when resizing and keeping the aspect */
@@ -20,7 +19,7 @@ static const uint8_t offsets[] = {0,15,0,15};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#5d5d5d","#333333","#7a8c5c","#ff6666","#cc9933","#0d131a","#000000"};
+static const char *colors[] = {"#35586c","#333333","#7a8c5c","#ff6666","#cc9933","#0d131a","#000000"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  * (By changing -DNCOMPTON to -DCOMPTON)
@@ -42,9 +41,9 @@ static const uint8_t borders[] = {3,5,5,4};
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
-static const char *menucmd[]   = { "/usr/bin/my_menu.sh", NULL };
+static const char *menucmd[]   = { "/usr/bin/gmrun", NULL };
 static const char *gmrun[]     = { "/usr/bin/gmrun",NULL};
-static const char *terminal[]  = { "urxvtc", NULL };
+static const char *terminal[]  = { "urxvt", NULL };
 static const char *rofi[]      = { "rofi", "-show", "run", NULL };
 static const char *slock[]     = { "slock", NULL };
 static const char *click1[]    = { "xdotool","click", "1", NULL };
@@ -140,7 +139,7 @@ static key keys[] = {
     // Full screen window without borders
     {  MOD ,              XK_x,         maximize,          {.i=TWOBWM_FULLSCREEN}},
     //Full screen window without borders overiding offsets
-    {  MOD |SHIFT,       XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
+    {  MOD |SHIFT ,       XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
     // Maximize vertically
     {  MOD ,              XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_VERTICALLY}},
     // Maximize horizontally
@@ -182,10 +181,10 @@ static key keys[] = {
     // Make the window stay on all workspaces
     {  MOD ,              XK_f,          fix,               {}},
     // Move the cursor
-    {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
-    {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
-    {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
-    {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
+   // {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
+   // {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
+   // {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
+   // {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
     // Move the cursor faster
     {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP}},
     {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN}},
@@ -196,7 +195,7 @@ static key keys[] = {
     {  MOD ,              XK_w,          start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_w,          start,             {.com = gmrun}},
     {  MOD ,              XK_z,          start,             {.com = rofi}},
-    {  MOD |SHIFT,        XK_x,          start,            {.com = slock}},
+    {  MOD |SHIFT,        XK_z,          start,             {.com = slock}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
