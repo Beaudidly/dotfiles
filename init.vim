@@ -9,6 +9,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'leafgarland/typescript-vim'
 Plug 'lervag/vimtex'
+Plug 'reedes/vim-pencil'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 set tabstop=4
@@ -22,6 +24,13 @@ set showmode
 
 filetype plugin indent on
 set number
+
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END<Paste>
 
 " Airline
 " remove seperators

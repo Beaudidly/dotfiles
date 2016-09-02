@@ -4,12 +4,10 @@ export ZSH=/home/beau/.oh-my-zsh
 # so java windows don't go white
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-#golang stuff
-export GOPATH=$HOME/go
-path+=('$GOPATH/bin')
-
-#rust stuff
-path+=($HOME/.cargo/env)
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/bin/virtualenvwrapper.sh
 
 ZSH_THEME="gallois"
 #ZSH_THEME="powerline"
